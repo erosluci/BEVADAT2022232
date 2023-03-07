@@ -19,7 +19,6 @@ def create_array(input_tuple = (2,2)):
     return arr
     
 
-
 # %%
 #Készíts egy függvényt ami a paraméterként kapott array-t főátlót feltölti egyesekkel
 #Be: [[1,2],[3,4]]
@@ -32,7 +31,6 @@ def set_one(input_array):
     return input_array
 
 
-
 # %%
 # Transzponáld a paraméterül kapott mártix-ot:
 # Be: [[1, 2], [3, 4]]
@@ -40,11 +38,8 @@ def set_one(input_array):
 # do_transpose()
 
 
-
-def do_transpose(inputtArray):
-    matrixtranspose = inputtArray.transpose()
-    return matrixtranspose
-
+def do_transpose(inputArrray) -> np.array:
+    return np.transpose(input_arrArrray)
 
 
 # %%
@@ -53,15 +48,9 @@ def do_transpose(inputtArray):
 # Ki: [0.12, 0.17]
 # round_array()
 
-
-
 def round_array(input_array):
     roundedarray = np.round(input_array,2)
     return roundedarray
-
-
-
-
 
 
 # %%
@@ -70,16 +59,26 @@ def round_array(input_array):
 # Ki: [[ True False False], [ True  True  True], [False False False]]
 # bool_array()
 
+def bool_array(zeroOneArray):
+    zeroOneArray = np.array(zeroOneArray,dtype='bool')
+    return zeroOneArray
+
 # %%
 # Készíts egy olyan függvényt, ami a bementként  0 és 1 ből álló tömben a 1 - False-ra az 0 True-ra cserélni
 # Be: [[1, 0, 0], [1, 1, 1],[0, 0, 0]]
 # Ki: [[ True False False], [ True  True  True], [False False False]]
 # invert_bool_array()
 
+def invert_bool_array(zeroOneChangesArray):
+    return np.invert(np.array(zeroOneChangesArray,dtype='bool'))
+
 # %%
 # Készíts egy olyan függvényt ami a paraméterként kapott array-t kilapítja
 # Be: [[1,2], [3,4]]
 # Ki: [1,2,3,4]
 # flatten()
+
+def flatten(array):
+    return np.ndarray.flatten(array)
 
 
