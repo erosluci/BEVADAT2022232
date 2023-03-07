@@ -38,8 +38,8 @@ def set_one(input_array):
 # do_transpose()
 
 
-def do_transpose(inputArrray) -> np.array:
-    return np.transpose(input_arrArrray)
+def do_transpose(input_array):
+    return input_array.transpose()
 
 
 # %%
@@ -48,10 +48,8 @@ def do_transpose(inputArrray) -> np.array:
 # Ki: [0.12, 0.17]
 # round_array()
 
-def round_array(input_array):
-    roundedarray = np.round(input_array,2)
-    return roundedarray
-
+def round_array(matrix , n = 2):
+    return np.round(matrix,rnd)
 
 # %%
 # Készíts egy olyan függvényt, ami a bementként  0 és 1 ből álló tömben a 0 - False-ra az 1 True-ra cserélni
@@ -59,8 +57,8 @@ def round_array(input_array):
 # Ki: [[ True False False], [ True  True  True], [False False False]]
 # bool_array()
 
-def bool_array(zeroOneArray):
-    zeroOneArray = np.array(zeroOneArray,dtype='bool')
+def bool_array(zeroOneCArray):
+    zeroOneArray = np.array(zeroOneCArray,dtype='bool')
     return zeroOneArray
 
 # %%
