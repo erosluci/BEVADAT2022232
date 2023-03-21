@@ -3,13 +3,13 @@ import numpy as np
 
 #FONTOS!!!
 
-# CSAK OTT LEHET HASZNÁLNI FOR LOOP-OT AHOL A FELADAT KÜLÖN KÉRI!
-# [1,2,3,4] --> ezek az értékek np.array-ek. Ahol listát kérek paraméterként ott külön ki fogom emelni!
-# Ha végeztél a feladatokkal, akkor notebook-ot alakítsd át .py.
-# A FÁJLBAN CSAK A FÜGGVÉNYEK LEGYENEK! (KOMMENTEK MARADHATNAK)
+# CSAK OTT LEHET HASZNï¿½LNI FOR LOOP-OT AHOL A FELADAT Kï¿½Lï¿½N Kï¿½RI!
+# [1,2,3,4] --> ezek az ï¿½rtï¿½kek np.array-ek. Ahol listï¿½t kï¿½rek paramï¿½terkï¿½nt ott kï¿½lï¿½n ki fogom emelni!
+# Ha vï¿½geztï¿½l a feladatokkal, akkor notebook-ot alakï¿½tsd ï¿½t .py.
+# A Fï¿½JLBAN CSAK A Fï¿½GGVï¿½NYEK LEGYENEK! (KOMMENTEK MARADHATNAK)
 
 
-# Írj egy olyan fügvényt, ami megfordítja egy 2d array oszlopait. Bemenetként egy array-t vár.
+# ï¿½rj egy olyan fï¿½gvï¿½nyt, ami megfordï¿½tja egy 2d array oszlopait. Bemenetkï¿½nt egy array-t vï¿½r.
 # Be: [[1,2],[3,4]]
 # Ki: [[2,1],[4,3]]
 # column_swap()
@@ -19,11 +19,11 @@ def column_swap(np_arr: np.array):
     return np_arr[:, ::-1]
 
 
-# Készíts egy olyan függvényt ami összehasonlít két array-t és adjon vissza egy array-ben, hogy hol egyenlõek 
+# Kï¿½szï¿½ts egy olyan fï¿½ggvï¿½nyt ami ï¿½sszehasonlï¿½t kï¿½t array-t ï¿½s adjon vissza egy array-ben, hogy hol egyenlï¿½ek 
 # Pl Be: [7,8,9], [9,8,7] 
 # Ki: [1]
 # compare_two_array()
-# egyenlõ elemszámúakra kell csak hogy mûködjön
+# egyenlï¿½ elemszï¿½mï¿½akra kell csak hogy mï¿½kï¿½djï¿½n
 
 
 def compare_two_array(array1, array2):
@@ -31,11 +31,11 @@ def compare_two_array(array1, array2):
     return equal_indices
 
 
-# Készíts egy olyan függvényt, ami vissza adja string-ként a megadott array dimenzióit:
+# Kï¿½szï¿½ts egy olyan fï¿½ggvï¿½nyt, ami vissza adja string-kï¿½nt a megadott array dimenziï¿½it:
 # Be: [[1,2,3], [4,5,6]]
 # Ki: "sor: 2, oszlop: 3, melyseg: 1"
 # get_array_shape()
-# 3D-vel még mûküdnie kell!, 
+# 3D-vel mï¿½g mï¿½kï¿½dnie kell!, 
 
 
 def get_array_shape(arr):
@@ -48,12 +48,12 @@ def get_array_shape(arr):
     elif len(shape) == 3:
         return f"sor: {shape[0]}, oszlop: {shape[1]}, melyseg: {shape[2]}"
     else:
-        return f"{len(shape)} dimenziós array"
+        return f"{len(shape)} dimenziï¿½s array"
 
 
-# Készíts egy olyan függvényt, aminek segítségével elõ tudod állítani egy neurális hálózat tanításához szükséges pred-et egy numpy array-bõl. 
-# Bementként add meg az array-t, illetve hogy mennyi class-od van. Kimenetként pedig adjon vissza egy 2d array-t, ahol a sorok az egyes elemek. Minden nullákkal teli legyen és csak ott álljon egyes, ahol a bementi tömb megjelöli. 
-# Pl. ha 1 van a bemeneten és 4 classod van, akkor az adott sorban az array-ban a [1] helyen álljon egy 1-es, a többi helyen pedig 0.
+# Kï¿½szï¿½ts egy olyan fï¿½ggvï¿½nyt, aminek segï¿½tsï¿½gï¿½vel elï¿½ tudod ï¿½llï¿½tani egy neurï¿½lis hï¿½lï¿½zat tanï¿½tï¿½sï¿½hoz szï¿½ksï¿½ges pred-et egy numpy array-bï¿½l. 
+# Bementkï¿½nt add meg az array-t, illetve hogy mennyi class-od van. Kimenetkï¿½nt pedig adjon vissza egy 2d array-t, ahol a sorok az egyes elemek. Minden nullï¿½kkal teli legyen ï¿½s csak ott ï¿½lljon egyes, ahol a bementi tï¿½mb megjelï¿½li. 
+# Pl. ha 1 van a bemeneten ï¿½s 4 classod van, akkor az adott sorban az array-ban a [1] helyen ï¿½lljon egy 1-es, a tï¿½bbi helyen pedig 0.
 # Be: [1, 2, 0, 3], 4
 # Ki: [[0,1,0,0], [0, 0, 1, 0], [1, 0, 0, 0], [0, 0, 0, 1]]
 # encode_Y()
@@ -66,7 +66,7 @@ def encode_Y(arr:np.array, num_classes) ->np.array:
     return encoded_arr
 
 
-# A fenti feladatnak valósítsd meg a kiértékelését. Adj meg a 2d array-t és adj vissza a decodolt változatát
+# A fenti feladatnak valï¿½sï¿½tsd meg a kiï¿½rtï¿½kelï¿½sï¿½t. Adj meg a 2d array-t ï¿½s adj vissza a decodolt vï¿½ltozatï¿½t
 # Be:  [[0,1,0,0], [0, 0, 1, 0], [1, 0, 0, 0], [0, 0, 0, 1]]
 # Ki:  [1, 2, 0, 3]
 # decode_Y()
@@ -77,8 +77,8 @@ def decode_Y(y:np.array) ->np.array:
     return decoded_y
 
 
-# Készíts egy olyan függvényt, ami képes kiértékelni egy neurális háló eredményét! Bemenetként egy listát és egy array-t és adja vissza azt az elemet, aminek a legnagyobb a valószínüsége(értéke) a listából.
-# Be: ['alma', 'körte', 'szilva'], [0.2, 0.2, 0.6]. # Az ['alma', 'körte', 'szilva'] egy lista!
+# Kï¿½szï¿½ts egy olyan fï¿½ggvï¿½nyt, ami kï¿½pes kiï¿½rtï¿½kelni egy neurï¿½lis hï¿½lï¿½ eredmï¿½nyï¿½t! Bemenetkï¿½nt egy listï¿½t ï¿½s egy array-t ï¿½s adja vissza azt az elemet, aminek a legnagyobb a valï¿½szï¿½nï¿½sï¿½ge(ï¿½rtï¿½ke) a listï¿½bï¿½l.
+# Be: ['alma', 'kï¿½rte', 'szilva'], [0.2, 0.2, 0.6]. # Az ['alma', 'kï¿½rte', 'szilva'] egy lista!
 # Ki: 'szilva'
 # eval_classification()
 
@@ -87,7 +87,7 @@ def eval_classification(class_names, probabilities):
     return class_names[np.argmax(probabilities)]
 
 
-# Készíts egy olyan függvényt, ahol az 1D array-ben a páratlan számokat -1-re cseréli
+# Kï¿½szï¿½ts egy olyan fï¿½ggvï¿½nyt, ahol az 1D array-ben a pï¿½ratlan szï¿½mokat -1-re cserï¿½li
 # Be: [1,2,3,4,5,6]
 # Ki: [-1,2,-1,4,-1,6]
 # repalce_odd_numbers()
@@ -98,8 +98,8 @@ def replace_odd_numbers(arr):
     return arr
 
 
-# Készíts egy olyan függvényt, ami egy array értékeit -1 és 1-re változtatja, attól függõen, hogy az adott elem nagyobb vagy kisebb a paraméterként megadott számnál.
-# Ha a szám kisebb mint a megadott érték, akkor -1, ha nagyobb vagy egyenlõ, akkor pedig 1.
+# Kï¿½szï¿½ts egy olyan fï¿½ggvï¿½nyt, ami egy array ï¿½rtï¿½keit -1 ï¿½s 1-re vï¿½ltoztatja, attï¿½l fï¿½ggï¿½en, hogy az adott elem nagyobb vagy kisebb a paramï¿½terkï¿½nt megadott szï¿½mnï¿½l.
+# Ha a szï¿½m kisebb mint a megadott ï¿½rtï¿½k, akkor -1, ha nagyobb vagy egyenlï¿½, akkor pedig 1.
 # Be: [1, 2, 5, 0], 2
 # Ki: [-1, 1, 1, -1]
 # replace_by_value()
@@ -111,11 +111,11 @@ def replace_by_value(arr, value):
     return arr
 
 
-# Készíts egy olyan függvényt, ami egy array értékeit összeszorozza és az eredményt visszaadja
+# Kï¿½szï¿½ts egy olyan fï¿½ggvï¿½nyt, ami egy array ï¿½rtï¿½keit ï¿½sszeszorozza ï¿½s az eredmï¿½nyt visszaadja
 # Be: [1,2,3,4]
 # Ki: 24
 # array_multi()
-# Ha több dimenziós a tömb, akkor az egész tömb elemeinek szorzatával térjen vissza
+# Ha tï¿½bb dimenziï¿½s a tï¿½mb, akkor az egï¿½sz tï¿½mb elemeinek szorzatï¿½val tï¿½rjen vissza
 
 
 import numpy as np
@@ -124,7 +124,7 @@ def array_multi(arr):
     return np.prod(arr)
 
 
-# Készíts egy olyan függvényt, ami egy 2D array értékeit összeszorozza és egy olyan array-el tér vissza, aminek az elemei a soroknak a szorzata
+# Kï¿½szï¿½ts egy olyan fï¿½ggvï¿½nyt, ami egy 2D array ï¿½rtï¿½keit ï¿½sszeszorozza ï¿½s egy olyan array-el tï¿½r vissza, aminek az elemei a soroknak a szorzata
 # Be: [[1, 2], [3, 4]]
 # Ki: [2, 12]
 # array_multi_2d()
@@ -134,7 +134,7 @@ def array_multi_2d(arr):
     return np.prod(arr, axis=1)
 
 
-# Készíts egy olyan függvényt, amit egy meglévõ numpy array-hez készít egy bordert nullásokkal. Bementként egy array-t várjon és kimenetként egy array jelenjen meg aminek van border-je
+# Kï¿½szï¿½ts egy olyan fï¿½ggvï¿½nyt, amit egy meglï¿½vï¿½ numpy array-hez kï¿½szï¿½t egy bordert nullï¿½sokkal. Bementkï¿½nt egy array-t vï¿½rjon ï¿½s kimenetkï¿½nt egy array jelenjen meg aminek van border-je
 # Be: [[1,2],[3,4]]
 # Ki: [[0,0,0,0],[0,1,2,0],[0,3,4,0],[0,0,0,0]]
 # add_border()
@@ -148,11 +148,11 @@ def add_border(arr):
     return bordered_arr
 
 
-# A KÖTVETKEZÕ FELADATOKHOZ NÉZZÉTEK MEG A NUMPY DATA TYPE-JÁT!
+# A Kï¿½TVETKEZï¿½ FELADATOKHOZ Nï¿½ZZï¿½TEK MEG A NUMPY DATA TYPE-Jï¿½T!
 
 
-# Készíts egy olyan függvényt ami két dátum között felsorolja az összes napot és ezt adja vissza egy numpy array-ben. A fgv ként str vár paraméterként 'YYYY-MM' formában.
-# Be: '2023-03', '2023-04'  # mind a kettõ paraméter str.
+# Kï¿½szï¿½ts egy olyan fï¿½ggvï¿½nyt ami kï¿½t dï¿½tum kï¿½zï¿½tt felsorolja az ï¿½sszes napot ï¿½s ezt adja vissza egy numpy array-ben. A fgv kï¿½nt str vï¿½r paramï¿½terkï¿½nt 'YYYY-MM' formï¿½ban.
+# Be: '2023-03', '2023-04'  # mind a kettï¿½ paramï¿½ter str.
 # Ki: ['2023-03-01', '2023-03-02', .. , '2023-03-31',]
 # list_days()
 
@@ -168,7 +168,7 @@ def list_days(start_date, end_date):
     return np.char.array(days.astype(str))
 
 
-# Írj egy fügvényt ami vissza adja az aktuális dátumot az alábbi formában: YYYY-MM-DD. Térjen vissza egy 'numpy.datetime64' típussal.
+# ï¿½rj egy fï¿½gvï¿½nyt ami vissza adja az aktuï¿½lis dï¿½tumot az alï¿½bbi formï¿½ban: YYYY-MM-DD. Tï¿½rjen vissza egy 'numpy.datetime64' tï¿½pussal.
 # Be:
 # Ki: 2017-03-24
 
@@ -177,9 +177,9 @@ def get_act_date():
     return np.datetime64('today')
 
 
-# Írj egy olyan függvényt ami visszadja, hogy mennyi másodperc telt el 1970 január 01. 00:02:00 óta. Int-el térjen vissza
+# ï¿½rj egy olyan fï¿½ggvï¿½nyt ami visszadja, hogy mennyi mï¿½sodperc telt el 1970 januï¿½r 01. 00:02:00 ï¿½ta. Int-el tï¿½rjen vissza
 # Be: 
-# Ki: másodpercben az idó, int-é kasztolva
+# Ki: mï¿½sodpercben az idï¿½, int-ï¿½ kasztolva
 # sec_from_1970()
 
 
