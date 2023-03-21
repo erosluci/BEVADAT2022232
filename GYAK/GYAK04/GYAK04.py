@@ -3,17 +3,17 @@ import matplotlib.pyplot as plt
 
 
 '''
-FONTOS: Az elsõ feladatáltal visszaadott DataFrame-et kell használni a további feladatokhoz. 
-A függvényeken belül mindig készíts egy másolatot a bemenõ df-rõl, (new_df = df.copy() és ezzel dolgozz tovább.)
+FONTOS: Az elsï¿½ feladatï¿½ltal visszaadott DataFrame-et kell hasznï¿½lni a tovï¿½bbi feladatokhoz. 
+A fï¿½ggvï¿½nyeken belï¿½l mindig kï¿½szï¿½ts egy mï¿½solatot a bemenï¿½ df-rï¿½l, (new_df = df.copy() ï¿½s ezzel dolgozz tovï¿½bb.)
 '''
 
 
 '''
-Készíts egy függvényt ami a bemeneti dictionary-bõl egy DataFrame-et ad vissza.
-Egy példa a bemenetre: test_dict
-Egy példa a kimenetre: test_df
+Kï¿½szï¿½ts egy fï¿½ggvï¿½nyt ami a bemeneti dictionary-bï¿½l egy DataFrame-et ad vissza.
+Egy pï¿½lda a bemenetre: test_dict
+Egy pï¿½lda a kimenetre: test_df
 return type: pandas.core.frame.DataFrame
-függvény neve: dict_to_dataframe
+fï¿½ggvï¿½ny neve: dict_to_dataframe
 '''
 
 
@@ -31,11 +31,11 @@ df = dict_to_dataframe(stats)
 
 
 '''
-Készíts egy függvényt ami a bemeneti DataFrame-bõl vissza adja csak azt az oszlopot amelynek a neve a bemeneti string-el megegyezõ.
-Egy példa a bemenetre: test_df, 'area'
-Egy példa a kimenetre: test_df
+Kï¿½szï¿½ts egy fï¿½ggvï¿½nyt ami a bemeneti DataFrame-bï¿½l vissza adja csak azt az oszlopot amelynek a neve a bemeneti string-el megegyezï¿½.
+Egy pï¿½lda a bemenetre: test_df, 'area'
+Egy pï¿½lda a kimenetre: test_df
 return type: pandas.core.series.Series
-függvény neve: get_column
+fï¿½ggvï¿½ny neve: get_column
 '''
 
 
@@ -46,11 +46,11 @@ def get_column(input: pd.core.frame.DataFrame, tag:str) -> pd.core.series.Series
 
 
 '''
-Készíts egy függvényt ami a bemeneti DataFrame-bõl vissza adja a két legnagyobb területû országhoz tartozó sorokat.
-Egy példa a bemenetre: test_df
-Egy példa a kimenetre: test_df
+Kï¿½szï¿½ts egy fï¿½ggvï¿½nyt ami a bemeneti DataFrame-bï¿½l vissza adja a kï¿½t legnagyobb terï¿½letï¿½ orszï¿½ghoz tartozï¿½ sorokat.
+Egy pï¿½lda a bemenetre: test_df
+Egy pï¿½lda a kimenetre: test_df
 return type: pandas.core.frame.DataFrame
-függvény neve: get_top_two
+fï¿½ggvï¿½ny neve: get_top_two
 '''
 
 
@@ -62,12 +62,12 @@ def get_top_two(input: pd.core.frame.DataFrame) -> pd.core.frame.DataFrame:
 
 
 '''
-Készíts egy függvényt ami a bemeneti DataFrame-bõl kiszámolja az országok népsûrûségét és eltárolja az eredményt egy új oszlopba ('density').
+Kï¿½szï¿½ts egy fï¿½ggvï¿½nyt ami a bemeneti DataFrame-bï¿½l kiszï¿½molja az orszï¿½gok nï¿½psï¿½rï¿½sï¿½gï¿½t ï¿½s eltï¿½rolja az eredmï¿½nyt egy ï¿½j oszlopba ('density').
 (density = population / area)
-Egy példa a bemenetre: test_df
-Egy példa a kimenetre: test_df
+Egy pï¿½lda a bemenetre: test_df
+Egy pï¿½lda a kimenetre: test_df
 return type: pandas.core.frame.DataFrame
-függvény neve: population_density
+fï¿½ggvï¿½ny neve: population_density
 '''
 
 
@@ -78,15 +78,15 @@ def population_density(input: pd.core.frame.DataFrame) -> pd.core.frame.DataFram
 
 
 '''
-Készíts egy függvényt, ami a bemeneti Dataframe adatai alapján elkészít egy olyan oszlopdiagramot (bar plot),
-ami vizualizálja az országok népességét.
-Az oszlopdiagram címe legyen: 'Population of Countries'
-Az x tengely címe legyen: 'Country'
-Az y tengely címe legyen: 'Population (millions)'
-Egy példa a bemenetre: test_df
-Egy példa a kimenetre: fig
+Kï¿½szï¿½ts egy fï¿½ggvï¿½nyt, ami a bemeneti Dataframe adatai alapjï¿½n elkï¿½szï¿½t egy olyan oszlopdiagramot (bar plot),
+ami vizualizï¿½lja az orszï¿½gok nï¿½pessï¿½gï¿½t.
+Az oszlopdiagram cï¿½me legyen: 'Population of Countries'
+Az x tengely cï¿½me legyen: 'Country'
+Az y tengely cï¿½me legyen: 'Population (millions)'
+Egy pï¿½lda a bemenetre: test_df
+Egy pï¿½lda a kimenetre: fig
 return type: matplotlib.figure.Figure
-függvény neve: plot_population
+fï¿½ggvï¿½ny neve: plot_population
 '''
 
 
@@ -104,13 +104,13 @@ def plot_population(df: pd.DataFrame) -> plt.Figure:
 
 
 '''
-Készíts egy függvényt, ami a bemeneti Dataframe adatai alapján elkészít egy olyan kördiagramot,
-ami vizualizálja az országok területét. Minden körcikknek legyen egy címe, ami az ország neve.
-Az kördiagram címe legyen: 'Area of Countries'
-Egy példa a bemenetre: test_df
-Egy példa a kimenetre: fig
+Kï¿½szï¿½ts egy fï¿½ggvï¿½nyt, ami a bemeneti Dataframe adatai alapjï¿½n elkï¿½szï¿½t egy olyan kï¿½rdiagramot,
+ami vizualizï¿½lja az orszï¿½gok terï¿½letï¿½t. Minden kï¿½rcikknek legyen egy cï¿½me, ami az orszï¿½g neve.
+Az kï¿½rdiagram cï¿½me legyen: 'Area of Countries'
+Egy pï¿½lda a bemenetre: test_df
+Egy pï¿½lda a kimenetre: fig
 return type: matplotlib.figure.Figure
-függvény neve: plot_area
+fï¿½ggvï¿½ny neve: plot_area
 '''
 
 
