@@ -1,7 +1,6 @@
 import numpy as np
 from typing import Tuple
 from scipy.stats import mode
-
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
 
